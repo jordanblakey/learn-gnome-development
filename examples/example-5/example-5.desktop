@@ -1,0 +1,6 @@
+[Desktop Entry]
+Type=Application
+Name=Example5
+Icon=/home/invisible/projects/learn-gnome-development/examples/example-5/exampleapp.png
+StartupNotify=true
+Exec=/home/invisible/projects/learn-gnome-development/examples/example-5/example-5

@@ -10,8 +10,16 @@ all:
 # g_unsetenv inside your C code is better, but this works for testing
 run-example:
 	@if [ -z "$(NUM)" ]; then echo "Error: NUM is missing"; exit 1; fi
-	$(CC) $(CFLAGS) -o examples/example-$(NUM) examples/example-$(NUM).c $(LIBS)
-	./examples/example-$(NUM)
+	@if [ -d "examples/example-$(NUM)" ]; then \
+		if [ -f "examples/example-$(NUM)/gresource.xml" ]; then \
+			glib-compile-resources examples/example-$(NUM)/gresource.xml --target=examples/example-$(NUM)/resources.c --generate-source; \
+		fi; \
+		$(CC) $(CFLAGS) -o examples/example-$(NUM)/example-$(NUM) examples/example-$(NUM)/*.c $(LIBS); \
+		./examples/example-$(NUM)/example-$(NUM); \
+	else \
+		$(CC) $(CFLAGS) -o examples/example-$(NUM) examples/example-$(NUM).c $(LIBS); \
+		./examples/example-$(NUM); \
+	fi
 
 setup: setup-c setup-python setup-builder setup-workbench
 

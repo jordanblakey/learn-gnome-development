@@ -1,21 +1,27 @@
 # learn-gnome-development
 
+<!-- Bookmark: https://docs.gtk.org/gtk4/getting_started.html#a-trivial-application -->
+Bookmark: https://docs.gtk.org/gtk4/getting_started.html#opening-files
+
+
 ## Getting Started
 https://docs.gtk.org/gtk4/index.html
 https://docs.gtk.org/gobject/concepts.html#conventions
 https://docs.gtk.org/gtk4/compiling.html
 https://docs.gtk.org/gio/struct.Resource.html
+https://docs.gtk.org/gio/class.Application.html
 
 ## Tools
-```
-# GNOME Workbench: Best for Learning & Prototyping
-# This is codepen for GTK. Uses Blueprint or XML, PyGObject, CSS
 
-flatpak install flathub re.sonny.Workbench
-flatpak run re.sonny.Workbench
-
+```sh
+# THE Gnome IDE
 flatpak install flathub org.gnome.Builder
 flatpak run org.gnome.Builder
+
+# GNOME Workbench: Best for Learning & Prototyping
+# This is codepen for GTK. Uses Blueprint or XML, PyGObject, CSS, gjs
+flatpak install flathub re.sonny.Workbench
+flatpak run re.sonny.Workbench
 ```
 
 ## Main object heirarchy
