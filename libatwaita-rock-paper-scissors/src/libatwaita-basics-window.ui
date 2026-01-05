@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<interface>
+  <requires lib="gtk" version="4.0"/>
+  <requires lib="Adw" version="1.0"/>
+  <template class="LibatwaitaBasicsWindow" parent="AdwApplicationWindow">
+    <property name="title" translatable="yes">Libatwaita-basics</property>
+    <property name="default-width">800</property>
+    <property name="default-height">600</property>
+    <property name="content">
+      <object class="AdwToolbarView">
+        <child type="top">
+          <object class="AdwHeaderBar">
+            <child type="end">
+              <object class="GtkMenuButton">
+                <property name="primary">True</property>
+                <property name="icon-name">open-menu-symbolic</property>
+                <property name="tooltip-text" translatable="yes">Main Menu</property>
+                <property name="menu-model">primary_menu</property>
+              </object>
+            </child>
+
+
+            <style>
+              <class name="flat"/>
+              <class name="see"/>
+            </style>
+
+          </object>
+        </child>
+
+        <child>
+          <object class="AdwLeaflet" id="leaflet">
+            <property name="can-unfold">false</property>
+            <property name="homogeneous">true</property>
+            <property name="can-navigate-back">true</property>
+
+            <child>
+              <object class="AdwStatusPage" id="home_page">
+                <property name="icon-name">handshake-symbolic</property>
+                <property name="title">Welcome</property>
+                <property name="description">Let's play rock paper scissors</property>
+                <property name="vexpand">true</property>
+
+                <!-- Buttons -->
+                <child>
+                  <object class="AdwClamp">
+                    <property name="maximum-size">250</property>
+
+                    <!-- ButtonsBox -->
+                    <child>
+                      <object class="GtkBox">
+                        <property name="orientation">vertical</property>
+
+                        <!-- RockButton -->
+                        <child>
+                          <object class="GtkButton" id="rock_button">
+                            <property name="action-name">win.rock</property>
+
+                            <property name="child">
+                              <object class="AdwButtonContent">
+                                <property name="icon-name">mountain-symbolic</property>
+                                <property name="label" translatable="yes">Rock</property>
+                                <property name="use-underline">True</property>
+                              </object>
+                            </property>
+
+                            <style>
+                              <class name="rock_button"/>
+                              <class name="pill"/>
+                            </style>
+
+                          </object>
+                        </child>
+
+                        <!-- PaperButton -->
+                        <child>
+                          <object class="GtkButton" id="paper_button">
+                            <property name="action-name">win.paper</property>
+
+                            <property name="child">
+                              <object class="AdwButtonContent">
+                                <property name="icon-name">document-text-symbolic</property>
+                                <property name="label" translatable="yes">Paper</property>
+                                <property name="use-underline">True</property>
+                              </object>
+                            </property>
+
+                            <style>
+                              <class name="paper_button"/>
+                              <class name="pill"/>
+                            </style>
+
+                          </object>
+                        </child>
+
+
+                        <!-- ScissorsButton -->
+                        <child>
+                          <object class="GtkButton" id="scissors_button">
+                            <property name="action-name">win.scissors</property>
+
+                            <property name="child">
+                              <object class="AdwButtonContent">
+                                <property name="icon-name">cut-symbolic</property>
+                                <property name="label" translatable="yes">Scissors</property>
+                                <property name="use-underline">True</property>
+                              </object>
+                            </property>
+
+                            <style>
+                              <class name="scissors_button"/>
+                              <class name="pill"/>
+                            </style>
+
+                          </object>
+                        </child>
+
+                      </object>
+                    </child>
+
+                  </object>
+                </child>
+
+              </object>
+            </child>
+
+            <!-- ReplayButton -->
+            <child>
+              <object class="AdwStatusPage" id="results_page">
+                <child>
+                  <object class="AdwClamp">
+
+                  <property name="maximum-size">250</property>
+
+                  <child>
+                    <object class="GtkButton" id="replay_button">
+                      <property name="action-name">win.replay</property>
+
+                      <style>
+                        <class name="pill"/>
+                        <class name="suggested-action"/>
+                      </style>
+
+                      <child>
+                        <object class="AdwButtonContent">
+                          <property name="label">Play Again</property>
+                          <property name="icon-name">arrow-circular-bottom-left-symbolic</property>
+                        </object>
+                      </child>
+
+                    </object>
+                  </child>
+                </object>
+
+
+                </child>
+
+
+              </object>
+            </child>
+
+          </object>
+        </child>
+
+      </object>
+    </property>
+  </template>
+
+
+  <menu id="primary_menu">
+    <section>
+      <item>
+        <attribute name="label" translatable="yes">_Preferences</attribute>
+        <attribute name="action">app.preferences</attribute>
+      </item>
+      <item>
+        <attribute name="label" translatable="yes">_Keyboard Shortcuts</attribute>
+        <attribute name="action">app.shortcuts</attribute>
+      </item>
+      <item>
+        <attribute name="label" translatable="yes">_About Libatwaita-basics</attribute>
+        <attribute name="action">app.about</attribute>
+      </item>
+    </section>
+  </menu>
+</interface>
+

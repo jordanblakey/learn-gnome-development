@@ -1,0 +1,8 @@
+# List of source files containing translatable strings.
+# Please keep this file sorted alphabetically.
+data/org.jordanblakey.LibatwaitaBasics.desktop.in
+data/org.jordanblakey.LibatwaitaBasics.metainfo.xml.in
+data/org.jordanblakey.LibatwaitaBasics.gschema.xml
+src/main.c
+src/libatwaita-basics-window.c
+src/libatwaita-basics-window.ui

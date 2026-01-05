@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=libatwaita-basics
+Exec=libatwaita-basics
+Icon=org.jordanblakey.LibatwaitaBasics
+Terminal=false
+Type=Application
+Categories=Utility;
+Keywords=GTK;
+StartupNotify=true
+DBusActivatable=true

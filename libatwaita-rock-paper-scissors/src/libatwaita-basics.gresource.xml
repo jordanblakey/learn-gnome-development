@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gresources>
+  <gresource prefix="/org/jordanblakey/LibatwaitaBasics">
+    <file>style.css</file>
+    <file preprocess="xml-stripblanks">libatwaita-basics-window.ui</file>
+    <file preprocess="xml-stripblanks">shortcuts-dialog.ui</file>
+    <file preprocess="xml-stripblanks">icons/sim-symbolic.svg</file>
+    <file preprocess="xml-stripblanks">icons/document-text-symbolic.svg</file>
+    <file preprocess="xml-stripblanks">icons/mountain-symbolic.svg</file>
+    <file preprocess="xml-stripblanks">icons/cut-symbolic.svg</file>
+    <file preprocess="xml-stripblanks">icons/handshake-symbolic.svg</file>
+    <file preprocess="xml-stripblanks">icons/arrow-circular-bottom-left-symbolic.svg</file>
+    <file preprocess="xml-stripblanks">icons/cross-large-circle-filled-symbolic.svg</file>
+  </gresource>
+</gresources>
